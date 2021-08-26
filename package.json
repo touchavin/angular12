@@ -4,12 +4,12 @@
 
     "scripts": {
         "ng": "ng",
-        "start": "node server.js",
+        "start": "ng serve --port $PORT --host 0.0.0.0 --disable-host-check",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "postinstall": "ng build --aot --prod"
+        "postinstall": "ng build --output-path angularapp --aot --prpd"
     },
     "private": true,
     "dependencies": {
@@ -29,12 +29,12 @@
         "sweetalert2": "^11.1.4",
         "tslib": "^2.3.0",
         "zone.js": "~0.11.4",
-        "typescript": "~4.3.5"
-    },
-    "devDependencies": {
-        "@angular-devkit/build-angular": "~12.2.1",
+        "typescript": "~4.3.5",
         "@angular/cli": "^12.2.2",
         "@angular/compiler-cli": "~12.2.0",
+        "@angular-devkit/build-angular": "~12.2.1"
+    },
+    "devDependencies": {
         "@types/jasmine": "~3.8.0",
         "@types/node": "^12.11.1",
         "jasmine-core": "~3.8.0",
@@ -43,7 +43,6 @@
         "karma-coverage": "~2.0.3",
         "karma-jasmine": "~4.0.0",
         "karma-jasmine-html-reporter": "~1.7.0",
-        "typescript": "~4.3.5"
     },
     "engines": {
         "node": "16.5.0",
